@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krishna Somani & Associates | Chartered Accountants</title>
 
-<!-- ✅ Updated Professional Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -31,7 +30,7 @@ html{
 body{
     color:var(--text);
     background:#fff;
-    padding-top:150px;
+    padding-top:140px;
     letter-spacing:0.3px;
 }
 
@@ -51,28 +50,31 @@ body{
     padding:15px 6%;
     display:flex;
     align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
     border-bottom:1px solid #eee;
 }
 
 .logo-area{
     display:flex;
     align-items:center;
+    flex-wrap:wrap;
 }
 
 .logo-area img{
-    height:60px;
-    margin-right:15px;
+    height:55px;
+    margin-right:12px;
 }
 
 .firm-details h1{
     font-family:'Merriweather', serif;
-    font-size:22px;
+    font-size:clamp(18px, 2vw, 22px);
     color:var(--primary);
     font-weight:700;
 }
 
 .firm-details span{
-    font-size:13px;
+    font-size:12px;
     letter-spacing:2px;
     color:#777;
 }
@@ -85,11 +87,12 @@ nav{
 nav ul{
     display:flex;
     justify-content:center;
+    flex-wrap:wrap;
     list-style:none;
 }
 
 nav ul li{
-    padding:18px 25px;
+    padding:15px 18px;
 }
 
 nav ul li a{
@@ -112,18 +115,18 @@ nav ul li a:hover{
     background-position:center;
     color:#fff;
     text-align:center;
-    padding:120px 20px;
+    padding:clamp(80px, 12vw, 140px) 20px;
 }
 
 .hero h2{
     font-family:'Merriweather', serif;
-    font-size:42px;
+    font-size:clamp(26px, 5vw, 42px);
     margin-bottom:20px;
     font-weight:700;
 }
 
 .hero p{
-    font-size:18px;
+    font-size:clamp(14px, 2.5vw, 18px);
     margin-bottom:30px;
     font-weight:300;
 }
@@ -135,19 +138,20 @@ nav ul li a:hover{
     text-decoration:none;
     font-weight:600;
     border-radius:3px;
+    display:inline-block;
 }
 
 /* ===== Sections ===== */
 section{
-    padding:80px 8%;
+    padding:clamp(50px, 8vw, 80px) 8%;
 }
 
 .section-title{
     text-align:center;
     font-family:'Merriweather', serif;
-    font-size:32px;
+    font-size:clamp(24px, 4vw, 32px);
     color:var(--primary);
-    margin-bottom:50px;
+    margin-bottom:40px;
     font-weight:700;
 }
 
@@ -158,20 +162,20 @@ section{
     line-height:1.8;
     max-width:900px;
     margin:auto;
-    padding:40px;
+    padding:clamp(20px, 4vw, 40px);
     border-radius:5px;
 }
 
 /* ===== Services ===== */
 .services{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 .service-box{
     background:var(--light);
-    padding:30px;
+    padding:25px;
     border-left:4px solid var(--secondary);
     transition:0.3s;
 }
@@ -191,6 +195,7 @@ section{
 .contact{
     text-align:center;
     line-height:1.8;
+    font-size:clamp(14px, 2vw, 16px);
 }
 
 /* ===== Footer ===== */
@@ -198,30 +203,54 @@ footer{
     background:var(--primary);
     color:#fff;
     text-align:center;
-    padding:25px;
+    padding:20px;
     font-size:14px;
     letter-spacing:1px;
 }
 
-/* ===== Responsive ===== */
+/* ===== Extra Responsive Tweaks ===== */
+
+/* Tablet */
+@media(max-width:1024px){
+    body{
+        padding-top:160px;
+    }
+}
+
+/* Mobile */
 @media(max-width:768px){
 
     body{
-        padding-top:200px;
+        padding-top:190px;
     }
 
     .header{
         flex-direction:column;
         text-align:center;
+        gap:10px;
+    }
+
+    .logo-area{
+        justify-content:center;
     }
 
     nav ul{
         flex-direction:column;
-        text-align:center;
     }
 
-    .hero h2{
-        font-size:28px;
+    nav ul li{
+        padding:12px;
+    }
+}
+
+/* Small Mobile */
+@media(max-width:480px){
+    body{
+        padding-top:210px;
+    }
+
+    .hero{
+        padding:70px 15px;
     }
 }
 
@@ -230,7 +259,6 @@ footer{
 
 <body>
 
-<!-- ===== Fixed Header ===== -->
 <div class="fixed-header">
 
     <div class="header">
@@ -254,14 +282,12 @@ footer{
 
 </div>
 
-<!-- ===== Hero Section ===== -->
 <section class="hero">
     <h2>Excellence in Audit, Taxation & Advisory</h2>
     <p>Providing strategic financial solutions with integrity, expertise and professionalism.</p>
     <a href="#contact" class="btn">Schedule Consultation</a>
 </section>
 
-<!-- ===== About Section ===== -->
 <section id="about">
     <h2 class="section-title">About Our Firm</h2>
     <div class="about">
@@ -271,40 +297,21 @@ footer{
     </div>
 </section>
 
-<!-- ===== Services Section ===== -->
 <section id="services">
     <h2 class="section-title">Our Services</h2>
 
     <div class="services">
 
-        <div class="service-box">
-            <h3>Audit and Assurance</h3>
-        </div>
-
-        <div class="service-box">
-            <h3>Taxation and Compliance</h3>
-        </div>
-
-        <div class="service-box">
-            <h3>Corporate and Regulatory Services</h3>
-        </div>
-
-        <div class="service-box">
-            <h3>Startup and Business Advisory</h3>
-        </div>
-
-        <div class="service-box">
-            <h3>Accounting and Compliance</h3>
-        </div>
-
-        <div class="service-box">
-            <h3>Governance, Risk and Advisory</h3>
-        </div>
+        <div class="service-box"><h3>Audit and Assurance</h3></div>
+        <div class="service-box"><h3>Taxation and Compliance</h3></div>
+        <div class="service-box"><h3>Corporate and Regulatory Services</h3></div>
+        <div class="service-box"><h3>Startup and Business Advisory</h3></div>
+        <div class="service-box"><h3>Accounting and Compliance</h3></div>
+        <div class="service-box"><h3>Governance, Risk and Advisory</h3></div>
 
     </div>
 </section>
 
-<!-- ===== Contact Section ===== -->
 <section id="contact" class="contact">
     <h2 class="section-title">Contact Us</h2>
     <p>Email: cakrishnasomani[at]gmail[dot]com</p>
