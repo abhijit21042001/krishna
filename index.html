@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krishna Somani & Associates | Chartered Accountants</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- ✅ Updated Professional Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --primary:#0f3057;
-    --secondary:#f9a826;
+    --primary:#0b2c4a;
+    --secondary:#c8a951;
     --light:#f4f6f9;
     --text:#333;
 }
@@ -20,7 +21,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:'Open Sans', sans-serif;
 }
 
 html{
@@ -28,12 +29,13 @@ html{
 }
 
 body{
-    line-height:1.6;
     color:var(--text);
-    padding-top:140px; /* For fixed header spacing */
+    background:#fff;
+    padding-top:150px;
+    letter-spacing:0.3px;
 }
 
-/* ===== FIXED HEADER FROM SECOND VERSION ===== */
+/* ===== Fixed Header ===== */
 .fixed-header{
     position:fixed;
     top:0;
@@ -44,6 +46,7 @@ body{
     box-shadow:0 3px 15px rgba(0,0,0,0.05);
 }
 
+/* ===== Top Header ===== */
 .header{
     padding:15px 6%;
     display:flex;
@@ -62,35 +65,38 @@ body{
 }
 
 .firm-details h1{
+    font-family:'Merriweather', serif;
     font-size:22px;
     color:var(--primary);
+    font-weight:700;
 }
 
 .firm-details span{
     font-size:13px;
-    letter-spacing:1px;
+    letter-spacing:2px;
     color:#777;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 nav{
     background:var(--primary);
 }
 
 nav ul{
-    list-style:none;
     display:flex;
     justify-content:center;
+    list-style:none;
 }
 
 nav ul li{
-    padding:15px 20px;
+    padding:18px 25px;
 }
 
 nav ul li a{
     color:#fff;
     text-decoration:none;
-    font-size:15px;
+    font-size:14px;
+    letter-spacing:1px;
     transition:0.3s;
 }
 
@@ -98,52 +104,65 @@ nav ul li a:hover{
     color:var(--secondary);
 }
 
-/* ===== HERO FROM FIRST VERSION ===== */
+/* ===== Hero ===== */
 .hero{
-    background:linear-gradient(rgba(15,48,87,0.8),rgba(15,48,87,0.8)),
-    url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c');
+    background:linear-gradient(rgba(11,44,74,0.85),rgba(11,44,74,0.85)),
+    url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
     background-size:cover;
     background-position:center;
     color:#fff;
     text-align:center;
-    padding:100px 20px;
+    padding:120px 20px;
 }
 
 .hero h2{
-    font-size:38px;
+    font-family:'Merriweather', serif;
+    font-size:42px;
     margin-bottom:20px;
+    font-weight:700;
 }
 
 .hero p{
     font-size:18px;
     margin-bottom:30px;
+    font-weight:300;
 }
 
 .btn{
-    display:inline-block;
-    padding:10px 25px;
+    padding:12px 30px;
     background:var(--secondary);
     color:#000;
     text-decoration:none;
-    border-radius:4px;
     font-weight:600;
+    border-radius:3px;
 }
 
-/* Sections */
+/* ===== Sections ===== */
 section{
-    padding:60px 20px;
-    max-width:1100px;
-    margin:auto;
+    padding:80px 8%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:40px;
+    font-family:'Merriweather', serif;
+    font-size:32px;
     color:var(--primary);
-    font-size:28px;
+    margin-bottom:50px;
+    font-weight:700;
 }
 
-/* ===== SERVICES DESIGN FROM SECOND VERSION ===== */
+/* ===== About ===== */
+.about{
+    background:var(--light);
+    text-align:center;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    border-radius:5px;
+}
+
+/* ===== Services ===== */
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -168,20 +187,27 @@ section{
     color:var(--primary);
 }
 
-/* Footer */
+/* ===== Contact ===== */
+.contact{
+    text-align:center;
+    line-height:1.8;
+}
+
+/* ===== Footer ===== */
 footer{
     background:var(--primary);
     color:#fff;
     text-align:center;
-    padding:20px;
+    padding:25px;
     font-size:14px;
+    letter-spacing:1px;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media(max-width:768px){
 
     body{
-        padding-top:190px;
+        padding-top:200px;
     }
 
     .header{
@@ -191,6 +217,11 @@ footer{
 
     nav ul{
         flex-direction:column;
+        text-align:center;
+    }
+
+    .hero h2{
+        font-size:28px;
     }
 }
 
@@ -199,7 +230,7 @@ footer{
 
 <body>
 
-<!-- ===== FIXED HEADER ===== -->
+<!-- ===== Fixed Header ===== -->
 <div class="fixed-header">
 
     <div class="header">
@@ -207,40 +238,40 @@ footer{
             <img src="ca-india-logo.png.jpeg" alt="CA India Logo">
             <div class="firm-details">
                 <h1>Krishna Somani & Associates</h1>
-                <span>Chartered Accountants</span>
+                <span>CHARTERED ACCOUNTANTS</span>
             </div>
         </div>
     </div>
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 
 </div>
 
-<!-- ===== HERO ===== -->
+<!-- ===== Hero Section ===== -->
 <section class="hero">
-    <h2>Professional Financial & Compliance Services</h2>
-    <p>Delivering trust, transparency and excellence in Chartered Accountancy services.</p>
-    <a href="#contact" class="btn">Consult Now</a>
+    <h2>Excellence in Audit, Taxation & Advisory</h2>
+    <p>Providing strategic financial solutions with integrity, expertise and professionalism.</p>
+    <a href="#contact" class="btn">Schedule Consultation</a>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- ===== About Section ===== -->
 <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
+    <h2 class="section-title">About Our Firm</h2>
+    <div class="about">
         Krishna Somani & Associates is a professionally managed Chartered Accountancy firm 
-        providing expert services in audit, taxation, compliance and business advisory.
-        We are committed to delivering high-quality solutions with integrity and professionalism.
-    </p>
+        delivering comprehensive services in audit, taxation, compliance and advisory. 
+        We focus on accuracy, transparency and long-term client relationships.
+    </div>
 </section>
 
-<!-- ===== SERVICES (Premium Style) ===== -->
+<!-- ===== Services Section ===== -->
 <section id="services">
     <h2 class="section-title">Our Services</h2>
 
@@ -273,14 +304,13 @@ footer{
     </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact">
+<!-- ===== Contact Section ===== -->
+<section id="contact" class="contact">
     <h2 class="section-title">Contact Us</h2>
-    <p style="text-align:center;">
-        Email: info@ksomaniassociates.com<br>
-        Phone: +91-XXXXXXXXXX<br>
-        Location: Mumbai, Maharashtra, India
-    </p>
+    <p>Email: cakrishnasomani[at]gmail[dot]com</p>
+    <p>Phone: +91-8379021071</p>
+    <p>Near, MIT college, Beed by Pass,</p>
+    <p>Chhatrapati Sambhajinagar, 431010</p>
 </section>
 
 <footer>
